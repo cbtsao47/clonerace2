@@ -5,6 +5,8 @@
 }
 html {
   box-sizing: border-box;
+  font-size: 62.5%;
+  font-family: sans-serif;
 }
 .container {
   background: #2b2c34;
@@ -12,4 +14,82 @@ html {
 .container .header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+}
+.container .header__logo {
+  display: flex;
+  padding: 1rem;
+  cursor: pointer;
+}
+.container .header__logo *:not(:last-child) {
+  margin-right: 0.7rem;
+}
+.container .header__logo--d {
+  width: 3rem;
+  height: 3rem;
+  background-color: #58b7ff;
+  border-radius: 0% 50% 50% 0%;
+}
+.container .header__logo--i {
+  width: 1rem;
+  height: 3rem;
+  background-color: #fb4f0e;
+  border-radius: 5px;
+}
+.container .header__logo--o {
+  width: 3rem;
+  height: 3rem;
+  background-color: #ee456e;
+  border-radius: 50%;
+}
+.container .header__nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+.container .header__nav--link1,
+.container .header__nav--link2,
+.container .header__nav--link3 {
+  margin: 0 2rem;
+  font-size: 1.8rem;
+  text-decoration: none;
+  color: #a4a6b9;
+}
+.container .header__nav--link1:hover,
+.container .header__nav--link2:hover,
+.container .header__nav--link3:hover {
+  color: #eee;
+  cursor: pointer;
+}
+.container .header__button {
+  border: none;
+  outline: none;
+  background-color: #48acf0;
+  color: #eee;
+  padding: 1rem 2rem;
+  font-size: 2rem;
+  margin-top: 1.5rem;
+  margin-right: 1.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.container .title {
+  text-align: center;
+}
+.container .title__main {
+  color: #eee;
+  margin: 0 auto;
+  width: 60rem;
+  font-size: 3.2rem;
+  line-height: 4rem;
+  margin-top: 10rem;
+}
+.container .title__sub {
+  text-transform: uppercase;
+  color: #82859a;
+  margin-top: 10rem;
+}
+.container .title__sub--bar {
+  border-bottom: 2px solid #82859a;
 }

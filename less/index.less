@@ -1,5 +1,6 @@
 @background-color: #2b2c34;
-
+@font-color: #eee;
+@font-family: sans-serif;
 * {
   box-sizing: inherit;
   margin: 0;
@@ -7,6 +8,8 @@
 }
 html {
   box-sizing: border-box;
+  font-size: 62.5%;
+  font-family: @font-family;
 }
 .container {
   background: @background-color;
@@ -15,25 +18,83 @@ html {
   .header {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     &__logo {
+      display: flex;
+      padding: 1rem;
+      cursor: pointer;
+      *:not(:last-child) {
+        margin-right: 0.7rem;
+      }
       &--d {
+        width: 3rem;
+        height: 3rem;
+        background-color: #58b7ff;
+        border-radius: 0% 50% 50% 0%;
       }
       &--i {
+        width: 1rem;
+        height: 3rem;
+        background-color: #fb4f0e;
+        border-radius: 5px;
       }
       &--o {
+        width: 3rem;
+        height: 3rem;
+        background-color: #ee456e;
+        border-radius: 50%;
       }
     }
     &__nav {
-      &--link1 {
-      }
-      &--link2 {
-      }
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex: 1;
+      // height: 100%;
+      // width: auto;
+      &--link1,
+      &--link2,
       &--link3 {
+        margin: 0 2rem;
+        font-size: 1.8rem;
+        text-decoration: none;
+        color: #a4a6b9;
+        &:hover {
+          color: #eee;
+          cursor: pointer;
+        }
       }
     }
     &__button {
+      border: none;
+      outline: none;
+      background-color: #48acf0;
+      color: @font-color;
+      padding: 1rem 2rem;
+      font-size: 2rem;
+      margin-top: 1.5rem;
+      margin-right: 1.5rem;
+      border-radius: 5px;
+      cursor: pointer;
     }
   }
-  .title__main {
+  .title {
+    text-align: center;
+    &__main {
+      color: #eee;
+      margin: 0 auto;
+      width: 60rem;
+      font-size: 3.2rem;
+      line-height: 4rem;
+      margin-top: 10rem;
+    }
+    &__sub {
+      text-transform: uppercase;
+      color: #82859a;
+      margin-top: 10rem;
+      &--bar {
+        border-bottom: 2px solid #82859a;
+      }
+    }
   }
 }
