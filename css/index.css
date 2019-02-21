@@ -1,0 +1,15 @@
+* {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+html {
+  box-sizing: border-box;
+}
+.container {
+  background: #2b2c34;
+}
+.container .header {
+  display: flex;
+  justify-content: space-between;
+}
